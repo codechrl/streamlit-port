@@ -1,6 +1,8 @@
 import numpy as np
 import streamlit as st
 
+st.title("Sentiment Analysis")
+
 tab1, tab2 = st.tabs(["📈 **Sentiment - English**", "🗃 **Sentiment - Indonesia**"])
 data = np.random.randn(10, 1)
 tab1.subheader("Sentiment Analysis on English")
