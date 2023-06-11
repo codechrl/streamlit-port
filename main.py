@@ -5,9 +5,9 @@ from st_pages import Page, Section, add_page_title, show_pages
 add_page_title()
 show_pages(
     [
-        Page("pages/home.py", "Home", "🏠"),
-        Page("pages/sentiment.py", "Sentiment Analysis", ":bar_chart:"),
-        Page("pages/gender.py", "Gender", ":male_sign:"),
-        Page("pages/instagram.py", "Instagram", ":camera:"),
+        Page("page/home.py", "Home", "🏠"),
+        Page("page/sentiment.py", "Sentiment Analysis", ":bar_chart:"),
+        Page("page/gender.py", "Gender", ":male_sign:"),
+        Page("page/instagram.py", "Instagram", ":camera:"),
     ]
 )
