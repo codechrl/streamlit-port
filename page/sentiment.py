@@ -1,15 +1,21 @@
+import time
+
 import numpy as np
 import streamlit as st
 
 st.title("Sentiment Analysis")
+st.write("---")
 
-tab1, tab2 = st.tabs(["📈 **Sentiment - English**", "🗃 **Sentiment - Indonesia**"])
+text = st.sidebar.text_input("**Username**", "@codechrl its just so bad...")
+button_clicked = st.sidebar.button("Analyze")
+
 data = np.random.randn(10, 1)
-tab1.subheader("Sentiment Analysis on English")
-text = st.text_input("**Input**", "@codechrl its just so bad...")
-button_clicked = st.button("Submit")
-if button_clicked:
-    st.write("You entered:", text)
 
-tab2.subheader("Sentiment Analysis on Indonesia")
-tab2.write(data)
+st.subheader("Sentiment Analysis on Twitter")
+if button_clicked:
+    with st.spinner("Getting latest tweets..."):
+        time.sleep(5)
+    with st.spinner("Analyzing tweets..."):
+        time.sleep(5)
+
+    st.write("You entered:", text)
